@@ -20,6 +20,17 @@ $ source .venv/bin/activate
 $ pip install -r requirements.txt
 ```
 
+## Configuration
+Place a bigip-query.conf in either `/etc/bigip-query.conf` `$HOME/.bigip-query.conf` or a `bigip-query.conf` in the current directory
+
+It has the following format
+```ini
+[DEFAULT]
+hostname = bigip.int.somedomain.com
+username = readonlyuser
+password = SjefsbamseNese
+```
+
 ## Usage
 
 List all VIPS
@@ -44,7 +55,7 @@ $ ./bigip-query.py <irulename>
 Query all VIPS NOT having a irule
 ```shell
 $ ./bigip-query.py -n <irulename>
-
+```
 
 ## TODO
 
