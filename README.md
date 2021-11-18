@@ -38,6 +38,8 @@ List all VIPS
 $ ./bigip-query.py 
 ``` 
 
+Searchparameters are regexp 
+
 Query a VIP by IP address
 ```console
 $ ./bigip-query.py 1.2.3.4
