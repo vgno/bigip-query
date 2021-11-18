@@ -1,7 +1,7 @@
 # F5 Bigip Query tool
 
 This is a small tool to scratch an itch. To easily see what backends are behind a VIP and what policies and rules are attached.
-Default it lists all, but you can also query by adding a glob that will match name, ip or rules.
+Default it lists all, but you can also query by adding a regex that will match name, ip or rules.
 
 ## Install instructions
 
@@ -28,7 +28,7 @@ It has the following format
 [DEFAULT]
 hostname = bigip.int.somedomain.com
 username = readonlyuser
-password = SjefsbamseNese
+password = FancyPasswordHorseStapleFish
 ```
 
 ## Usage
