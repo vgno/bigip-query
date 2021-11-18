@@ -1,4 +1,4 @@
 [DEFAULT]
 hostname = bigip.int.somedomain.com
-username = admin
+username = readonlyuser
 password = SjefsbamseNese

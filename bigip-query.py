@@ -1,4 +1,7 @@
 #!/usr/bin/env python3 
+# Copyright Audun Ytterdal <audun.ytterdal@schibsted.com>
+# License GPLv
+
 
 from warnings import catch_warnings
 from f5.bigip import ManagementRoot
@@ -7,10 +10,15 @@ from pprint import pprint
 import argparse
 import dns.resolver
 import re
+import os
 import signal
 
 config = configparser.ConfigParser()
-config.read('bigip-query.conf')
+configfileread = config.read(['/etc/bigip-query.conf',os.path.expanduser('~/.bigip-query.conf'),'./bigip-query.conf'])
+if (configfileread): 
+    print("Reading config from: " + ",".join(configfileread))
+else: 
+    exit("No configfile found in /etc/bigip-query.conf, ~/.bigip-query.conf or ./bigip-query.conf")
 
 mgmt = ManagementRoot(config['DEFAULT']['hostname'], config['DEFAULT']['username'], config['DEFAULT']['password'])
 ltm = mgmt.tm.ltm
