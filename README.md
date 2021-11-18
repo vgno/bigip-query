@@ -34,12 +34,12 @@ password = SjefsbamseNese
 ## Usage
 
 List all VIPS
-```shell
+```console
 $ ./bigip-query.py 
 ``` 
 
 Query a VIP by IP address
-```shell
+```console
 $ ./bigip-query.py 1.2.3.4
 ```
 Query a VIP by IP address
@@ -48,12 +48,12 @@ $ ./bigip-query.py <name>
 ```
 
 Query VIPs by Irule
-```shell
+```console
 $ ./bigip-query.py <irulename>
 ```
 
 Query all VIPS NOT having a irule
-```shell
+```console
 $ ./bigip-query.py -n <irulename>
 ```
 
@@ -61,5 +61,5 @@ $ ./bigip-query.py -n <irulename>
 
 * Use tokens instead of users
 * Check actual certificates, not only ssl-profile
-* Create single binary(?)
+* Create single binary for distribution
 
